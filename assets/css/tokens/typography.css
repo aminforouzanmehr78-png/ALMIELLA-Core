@@ -1,0 +1,16 @@
+/**
+ * ALMIELLA Typography
+ */
+
+:root {
+
+    --almiella-font-family:
+        "Inter", sans-serif;
+
+    --almiella-font-size:
+        16px;
+
+    --almiella-font-weight:
+        500;
+
+}

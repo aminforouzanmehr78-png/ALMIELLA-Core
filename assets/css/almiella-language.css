@@ -1,0 +1,228 @@
+/*
+=========================================
+ ALMIELLA Language Switcher
+ Version: 4.1.0
+=========================================
+*/
+
+/* ==========================
+   Wrapper
+========================== */
+
+.almiella-language{
+
+    position:relative;
+
+    display:inline-block;
+
+}
+
+
+/* ==========================
+   Toggle Button
+========================== */
+
+.almiella-language-toggle{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    min-width:78px;
+
+    height:44px;
+
+    padding:0 18px;
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(94,142,160,.30);
+
+    border-radius:999px;
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    color:#5E8EA0;
+
+    cursor:pointer;
+
+    transition:all .35s ease;
+
+}
+
+
+/* Hover */
+
+.almiella-language-toggle:hover{
+
+    color:#B58CFF;
+
+    border-color:#B58CFF;
+
+    box-shadow:0 0 20px rgba(181,140,255,.35);
+
+    transform:translateY(-2px);
+
+}
+
+
+/* ==========================
+   Current Language
+========================== */
+
+.almiella-language-current{
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:#5E8EA0;
+
+    text-transform:capitalize;
+
+    letter-spacing:.5px;
+
+}
+
+
+/* Arrow */
+
+.almiella-language-arrow{
+
+    font-size:10px;
+
+    color:#5E8EA0;
+
+    transition:transform .35s ease,color .35s ease;
+
+}
+
+
+.almiella-language-toggle:hover
+.almiella-language-arrow{
+
+    color:#B58CFF;
+
+}
+
+
+.almiella-language.open
+.almiella-language-arrow{
+
+    transform:rotate(180deg);
+
+}
+
+
+/* ==========================
+   Dropdown
+========================== */
+
+.almiella-language-dropdown{
+
+    position:absolute;
+
+    top:56px;
+
+    right:0;
+
+    width:210px;
+
+    display:none;
+
+    padding:8px;
+
+    border-radius:18px;
+
+    background:rgba(10,15,30,.94);
+
+    border:1px solid rgba(255,255,255,.10);
+
+    backdrop-filter:blur(24px);
+    -webkit-backdrop-filter:blur(24px);
+
+    box-shadow:0 12px 40px rgba(0,0,0,.35);
+
+    z-index:9999;
+
+}
+
+
+.almiella-language.open
+.almiella-language-dropdown{
+
+    display:block;
+
+}
+
+
+/* ==========================
+   Options
+========================== */
+
+.almiella-language-option{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    width:100%;
+
+    padding:12px 14px;
+
+    border-radius:12px;
+
+    text-decoration:none;
+
+    color:#ffffff;
+
+    transition:all .25s ease;
+
+}
+
+
+.almiella-language-option:hover{
+
+    background:rgba(181,140,255,.12);
+
+    color:#B58CFF;
+
+}
+
+
+.almiella-language-option.is-active{
+
+    color:#B58CFF;
+
+    background:rgba(181,140,255,.08);
+
+}
+
+
+/* ==========================
+   Responsive
+========================== */
+
+@media (max-width:767px){
+
+    .almiella-language-dropdown{
+
+        width:180px;
+
+    }
+
+}
+.almiella-language-dropdown{
+    display:none !important;
+}
+
+.almiella-language.open .almiella-language-dropdown{
+    display:block !important;
+}

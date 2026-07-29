@@ -1,0 +1,11 @@
+/**
+ * ALMIELLA Motion
+ */
+
+:root {
+
+    --almiella-transition-fast: .2s;
+    --almiella-transition: .35s;
+    --almiella-transition-slow: .6s;
+
+}

@@ -1,0 +1,153 @@
+/**
+ * ==========================================
+ * ALMIELLA Button System
+ * Version: 1.0.0
+ * ==========================================
+ */
+
+
+/* ========= Base ========= */
+
+.almiella-btn{
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:.6rem;
+
+    padding:14px 28px;
+
+    border:none;
+    border-radius:var(--almiella-radius-lg);
+
+    cursor:pointer;
+
+    text-decoration:none;
+
+    font-family:var(--almiella-font-family);
+    font-size:var(--almiella-font-size);
+    font-weight:600;
+
+    transition:
+        transform var(--almiella-transition),
+        box-shadow var(--almiella-transition),
+        background var(--almiella-transition),
+        color var(--almiella-transition);
+
+}
+
+
+
+/* ========= Primary ========= */
+
+.almiella-btn-primary{
+
+    background:var(--almiella-primary);
+
+    color:#fff;
+
+}
+
+.almiella-btn-primary:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:var(--almiella-glow);
+
+}
+
+
+
+/* ========= Secondary ========= */
+
+.almiella-btn-secondary{
+
+    background:var(--almiella-secondary);
+
+    color:#080B1A;
+
+}
+
+.almiella-btn-secondary:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:var(--almiella-glow);
+
+}
+
+
+
+/* ========= Glass ========= */
+
+.almiella-btn-glass{
+
+    background:var(--almiella-glass-bg);
+
+    border:1px solid var(--almiella-glass-border);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    color:#fff;
+
+}
+
+.almiella-btn-glass:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:var(--almiella-glow);
+
+}
+
+
+
+/* ========= Ghost ========= */
+
+.almiella-btn-ghost{
+
+    background:transparent;
+
+    border:1px solid var(--almiella-primary);
+
+    color:var(--almiella-primary);
+
+}
+
+.almiella-btn-ghost:hover{
+
+    background:var(--almiella-primary);
+
+    color:#fff;
+
+}
+
+
+
+/* ========= Disabled ========= */
+
+.almiella-btn:disabled,
+.almiella-btn.is-disabled{
+
+    opacity:.55;
+
+    cursor:not-allowed;
+
+    pointer-events:none;
+
+}
+
+
+
+/* ========= Focus ========= */
+
+.almiella-btn:focus-visible{
+
+    outline:none;
+
+    box-shadow:
+        0 0 0 4px rgba(181,140,255,.25);
+
+}

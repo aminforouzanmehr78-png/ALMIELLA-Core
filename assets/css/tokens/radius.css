@@ -1,0 +1,13 @@
+/**
+ * ALMIELLA Radius
+ */
+
+:root {
+
+    --almiella-radius-xs: 8px;
+    --almiella-radius-sm: 12px;
+    --almiella-radius-md: 18px;
+    --almiella-radius-lg: 24px;
+    --almiella-radius-xl: 32px;
+
+}

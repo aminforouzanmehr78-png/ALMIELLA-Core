@@ -1,0 +1,68 @@
+/* =====================================
+   ALMIELLA Language Switcher Widget
+   Version: 1.0.0
+===================================== */
+
+
+.almiella-language-widget {
+    position: relative;
+    display: inline-block;
+}
+
+
+/* Button */
+
+.almiella-language-toggle {
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    cursor: pointer;
+
+    background: transparent;
+    border: none;
+
+}
+
+
+/* Dropdown */
+
+.almiella-language-dropdown {
+
+    position: absolute;
+
+    top: calc(100% + 10px);
+    left: 0;
+
+    min-width: 150px;
+
+    display: none;
+
+    z-index: 9999;
+
+}
+
+
+/* Open State */
+
+.almiella-language-widget.active 
+.almiella-language-dropdown {
+
+    display: block;
+
+}
+
+
+
+/* Options */
+
+.almiella-language-option {
+
+    display: block;
+
+    padding: 10px 15px;
+
+    text-decoration: none;
+
+}

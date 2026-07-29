@@ -1,0 +1,20 @@
+/**
+ * ALMIELLA Core Styles
+ * Version: 1.0.0
+ */
+
+
+:root {
+
+    --almiella-primary: #78DCFF;
+    --almiella-dark: #101426;
+    --almiella-glow: rgba(120,220,255,0.35);
+
+}
+
+
+.almiella-hidden {
+
+    display:none !important;
+
+}

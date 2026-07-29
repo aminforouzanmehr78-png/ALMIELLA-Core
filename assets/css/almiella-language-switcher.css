@@ -1,0 +1,349 @@
+/**
+ * =========================================
+ * ALMIELLA Language Switcher CSS
+ * Animation Engine
+ * Version: 1.1.0
+ * =========================================
+ */
+
+
+/* =========================================
+   Wrapper
+========================================= */
+
+
+.almiella-language-switcher {
+
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    z-index: 9999;
+
+}
+
+
+
+
+
+/* =========================================
+   Trigger Button
+========================================= */
+
+
+.almiella-language-trigger {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    cursor: pointer;
+
+    transition:
+
+        transform .3s ease,
+
+        box-shadow .3s ease,
+
+        background .3s ease;
+
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+
+
+
+/* Magical Shine Effect */
+
+
+.almiella-language-trigger::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: -120%;
+
+    width: 80%;
+
+    height: 100%;
+
+
+    background:
+
+    linear-gradient(
+
+        120deg,
+
+        transparent,
+
+        rgba(255,255,255,.35),
+
+        transparent
+
+    );
+
+
+    transition: .6s ease;
+
+}
+
+
+
+.almiella-language-trigger:hover::before {
+
+    left: 140%;
+
+}
+
+
+
+
+
+
+/* =========================================
+   Language Text
+========================================= */
+
+
+.language-code {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+
+.language-arrow {
+
+    font-size: 12px;
+
+    transition:
+
+        transform .3s ease;
+
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+
+
+
+/* Rotate Arrow */
+
+
+.almiella-language-switcher.active 
+.language-arrow {
+
+
+    transform:
+
+        rotate(180deg);
+
+
+}
+
+
+
+
+
+
+
+/* =========================================
+   Dropdown Menu
+========================================= */
+
+
+.almiella-language-menu {
+
+
+    position: absolute;
+
+
+    top: calc(100% + 12px);
+
+
+    left: 0;
+
+
+    min-width: 170px;
+
+
+    padding: 10px;
+
+
+    display: flex;
+
+    flex-direction: column;
+
+
+    gap: 6px;
+
+
+
+    opacity: 0;
+
+
+    visibility: hidden;
+
+
+    transform:
+
+        translateY(-15px)
+
+        scale(.95);
+
+
+
+    transition:
+
+        opacity .3s ease,
+
+        transform .3s ease,
+
+        visibility .3s ease;
+
+
+
+    backdrop-filter: blur(18px);
+
+
+    -webkit-backdrop-filter: blur(18px);
+
+
+
+    z-index: 99999;
+
+
+}
+
+
+
+
+
+
+
+/* Open State */
+
+
+.almiella-language-switcher.active
+
+.almiella-language-menu {
+
+
+    opacity: 1;
+
+
+    visibility: visible;
+
+
+    transform:
+
+        translateY(0)
+
+        scale(1);
+
+
+}
+
+
+
+
+
+
+
+
+/* =========================================
+   Language Items
+========================================= */
+
+
+.language-item {
+
+
+    display: flex;
+
+
+    align-items: center;
+
+
+    padding: 10px 14px;
+
+
+    border-radius: 10px;
+
+
+    text-decoration: none;
+
+
+    transition:
+
+        background .3s ease,
+
+        transform .3s ease;
+
+
+
+}
+
+
+
+
+.language-item:hover {
+
+
+    transform:
+
+        translateX(5px);
+
+
+}
+
+
+
+
+
+
+
+/* =========================================
+   Mobile Optimization
+========================================= */
+
+
+@media(max-width:767px){
+
+
+    .almiella-language-menu {
+
+
+        right:0;
+
+        left:auto;
+
+
+        min-width:150px;
+
+
+    }
+
+
+}

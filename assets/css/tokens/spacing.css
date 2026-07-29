@@ -1,0 +1,13 @@
+/**
+ * ALMIELLA Spacing
+ */
+
+:root {
+
+    --almiella-space-xs: .25rem;
+    --almiella-space-sm: .5rem;
+    --almiella-space-md: 1rem;
+    --almiella-space-lg: 1.5rem;
+    --almiella-space-xl: 2rem;
+
+}

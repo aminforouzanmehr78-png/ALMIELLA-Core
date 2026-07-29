@@ -1,0 +1,97 @@
+/**
+ * ALMIELLA Design System
+ * Version: 1.0.0
+ */
+
+
+/* =========================
+   Design Tokens
+========================= */
+
+:root {
+
+    /* Brand Colors */
+
+    --almiella-primary: #B58CFF;
+
+    --almiella-secondary: #78DCFF;
+
+    --almiella-dark: #080B1A;
+
+
+    /* Glass */
+
+    --almiella-glass-bg: rgba(255,255,255,0.08);
+
+    --almiella-glass-border: rgba(255,255,255,0.18);
+
+
+    /* Shadows */
+
+    --almiella-glow:
+        0 0 30px rgba(120,220,255,0.35);
+
+
+    /* Radius */
+
+    --almiella-radius:
+        24px;
+
+}
+
+
+
+/* =========================
+   Glass Component
+========================= */
+
+.almiella-glass {
+
+    background:
+        var(--almiella-glass-bg);
+
+    backdrop-filter:
+        blur(18px);
+
+    -webkit-backdrop-filter:
+        blur(18px);
+
+    border:
+        1px solid var(--almiella-glass-border);
+
+    border-radius:
+        var(--almiella-radius);
+
+}
+
+
+
+/* =========================
+   Glow Hover
+========================= */
+
+.almiella-hover-glow {
+
+    transition:
+        all .35s ease;
+
+}
+
+
+.almiella-hover-glow:hover {
+
+    box-shadow:
+        var(--almiella-glow);
+
+    transform:
+        translateY(-4px);
+
+}
+
+
+
+/* =========================
+   ALMIELLA Components
+========================= */
+
+@import url("./components/buttons.css");
